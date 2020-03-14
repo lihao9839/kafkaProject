@@ -1,4 +1,8 @@
-package com.lihao.algorithm.leecode;
+package com.lihao.algorithms.leecode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /*
 输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。
@@ -13,9 +17,6 @@ package com.lihao.algorithm.leecode;
 输入：target = 15
 输出：[[1,2,3,4,5],[4,5,6],[7,8]]
 */
-
-import java.util.*;
-
 public class FindContinuousSequence {
     public int[][] findContinuousSequence(int target) {
         List<int[]> resultList = new ArrayList<>();
