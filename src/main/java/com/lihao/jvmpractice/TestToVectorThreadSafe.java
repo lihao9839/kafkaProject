@@ -40,7 +40,6 @@ public class TestToVectorThreadSafe {
             printThread.start();
             //不产生过多线程，否则操作系统假死；
             while(Thread.activeCount() > 20);
-            Hashtable
         }
     }
 }
