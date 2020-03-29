@@ -3,6 +3,9 @@ package com.lihao.thread.pattern.threadspecificstorage;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
+/**
+ * 基于ThreadSpecificStorage模式的抢随机数生成容器客户端代码
+ */
 public class ThreadSpecificSecureRandom {
     public static final ThreadSpecificSecureRandom INSTANCE = new ThreadSpecificSecureRandom();
 
