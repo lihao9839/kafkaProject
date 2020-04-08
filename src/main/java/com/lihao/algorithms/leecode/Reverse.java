@@ -1,4 +1,4 @@
-package com.lihao.algorithm.leecode;
+package com.lihao.algorithms.leecode;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -23,9 +23,6 @@ import java.util.List;
 
 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/reverse-integer
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Reverse {
     public int reverse(int x) {
@@ -69,9 +66,34 @@ public class Reverse {
         return result;
     }
 
+    public int reverse3(int x){
+        String str = String.valueOf(x);
+        if(x < 0){
+            str = str.substring(1);
+        }
+        char[] array = str.toCharArray();
+        for(int i = 0; i < (array.length/2); i++){
+            char tempChar = array[i];
+            array[i] = array[array.length-1-i];
+            array[array.length-1-i] = tempChar;
+        }
+        String result = String.valueOf(array);
+        if(x < 0){
+            if(Long.valueOf(result) > Integer.MAX_VALUE){
+                return 0;
+            }
+            return 0 - Integer.valueOf(result);
+        }else{
+            if(Long.valueOf(result) > Integer.MAX_VALUE){
+                return 0;
+            }
+            return Integer.valueOf(result);
+        }
+    }
+
     public static void main(String[] args){
-        int x = 1534236469;
-        Reverse r = new Reverse();
-        System.out.println(r.reverse2(x));
+        int x = -2147483648;
+        Reverse reverse = new Reverse();
+        System.out.println(reverse.reverse3(x));
     }
 }

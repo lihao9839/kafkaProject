@@ -3,6 +3,9 @@ package com.lihao.redis;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 漏斗限流算法Java实现
+ */
 public class FunnelRateLimiter {
     int capacity;
     float leakingRate;

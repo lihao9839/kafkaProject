@@ -1,7 +1,5 @@
 package com.lihao.thread.pattern.guardedsuspensionpattern;
 
-import jdk.vm.ci.code.site.Call;
-
 import java.util.concurrent.Callable;
 
 public interface Blocker {
