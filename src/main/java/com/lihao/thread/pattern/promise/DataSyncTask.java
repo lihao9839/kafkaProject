@@ -1,7 +1,5 @@
 package com.lihao.thread.pattern.promise;
 
-import org.apache.kafka.common.protocol.types.Field;
-
 import java.io.File;
 import java.util.HashSet;
 import java.util.Map;

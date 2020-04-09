@@ -6,7 +6,6 @@ import java.io.*;
 import java.text.Normalizer;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ExecutionException;
 
 public class AttachmentProcessor {
     private final String ATTACHMENT_SHORT_BASE_DIR = "";
